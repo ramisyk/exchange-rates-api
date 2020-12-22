@@ -1,0 +1,20 @@
+class UI{
+    constructor(firstSelect, secondSelect){
+        this.firstSelect = firstSelect;
+        this.secondSelect = secondSelect;
+
+        this.outputFirst = document.getElementById("outputFirst");
+        this.outputSecond = document.getElementById("outputSecond");
+        this.outputResult = document.getElementById("outputResult");
+    }
+    changeFirst(){
+        this.outputFirst.textContent = this.firstSelect.options[this.firstSelect.selectedIndex].textContent;
+    }
+
+    changeSecond(){
+        this.outputSecond.textContent = this.firstSelect.options[this.secondSelect.selectedIndex].textContent;
+    }
+    displayResult(amount){
+        this.outputResult.value = amount;
+    }
+}
